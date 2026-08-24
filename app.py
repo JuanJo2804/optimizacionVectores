@@ -54,7 +54,7 @@ with tab1:
     col_cfg, col_data = st.columns([1, 2])
 
     with col_cfg:
-        n = st.slider("Número de lecturas (n)", 50, 5000, 500, step=50)
+        n = st.slider("Número de lecturas (n)", 50, 5000, 500, step=10)
         temp_umbral = st.slider("Umbral temperatura (°C) — mayor que", 15, 40, 30)
         hum_umbral = st.slider("Umbral humedad (%) — menor que", 20, 80, 40)
 
@@ -100,7 +100,7 @@ with tab2:
         "complejidades comunes, a medida que aumentan los datos."
     )
 
-    n_max = st.slider("Tamaño máximo de n para la gráfica", 10, 200, 50)
+    n_max = st.slider("Tamaño máximo de n para la gráfica", 0.00010, 0.001200, 0.010)
     n_valores = np.arange(1, n_max + 1)
 
     fig2, ax2 = plt.subplots(figsize=(8, 5))
