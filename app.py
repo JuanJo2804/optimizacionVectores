@@ -103,13 +103,13 @@ with tab2:
     n_valores = np.arange(1, n_max + 1)
 
     fig2, ax2 = plt.subplots(figsize=(8, 5))
-    factorial_func = np.vectorize(math.factorial)
+    factoriales = [math.factorial(int(n)) for n in n_valores]
     ax2.plot(n_valores, np.ones_like(n_valores), label="O(1) — constante")
     ax2.plot(n_valores, n_valores, label="O(n) — lineal (nuestro detector)")
     ax2.plot(n_valores, n_valores * np.log2(np.maximum(n_valores, 2)), label="O(n log n)")
     ax2.plot(n_valores, n_valores ** 2, label="O(n²) — cuadrática")
     ax2.plot(n_valores, 2 ** n_valores, label="O((2)^2) — exponencial")
-    plt.plot(n_valores, factorial_func(n_valores), label="O(n!) — factorial")
+    ax2.plot(n_valores, factoriales, label="O(n!) — factorial")
     ax2.set_xlabel("Tamaño de los datos (n)")
     ax2.set_ylabel("Operaciones (teórico)")
     ax2.legend()
