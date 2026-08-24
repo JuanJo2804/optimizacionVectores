@@ -100,7 +100,7 @@ with tab2:
         "complejidades comunes, a medida que aumentan los datos."
     )
 
-    n_max = st.slider("Tamaño máximo de n para la gráfica", 0.00010, 0.001200, 0.010)
+    n_max = st.slider("Tamaño máximo de n para la gráfica", 1, 10, 1)
     n_valores = np.arange(1, n_max + 1)
 
     fig2, ax2 = plt.subplots(figsize=(8, 5))
