@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import streamlit as st
+import math
 
 st.set_page_config(page_title="Detector de Anomalías — Módulo 4", layout="wide")
 
